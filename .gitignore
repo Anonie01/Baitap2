@@ -1,32 +1,18 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+#include <iostream>
+using namespace std;
+int main() {
+    int num;
+    cout << "Nhap vao mot so nguyen: ";
+    cin >> num;
+    int arr[10], i = 0;
+    while (num != 0) {
+        arr[i] = num % 10;
+        num /= 10; 
+        i++;
+    }
+    cout << "So dao nguoc: ";
+    for (int j = 0; j<i; j++) {
+		cout << arr[j];
+    }
+    return 0;
+}
